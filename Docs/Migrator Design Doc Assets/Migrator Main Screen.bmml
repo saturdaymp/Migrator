@@ -1,0 +1,104 @@
+<mockup version="1.0" skin="sketch" measuredW="913" measuredH="547" mockupW="702" mockupH="440">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="211" y="107" w="702" h="440" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Migrator</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="226" y="142" w="-1" h="-1" measuredW="110" measuredH="21" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Connection%20String%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Label" x="226" y="175" w="-1" h="-1" measuredW="99" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Migration%20Folder%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="226" y="205" w="-1" h="-1" measuredW="96" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Migration%20Table%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="226" y="235" w="-1" h="-1" measuredW="81" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Schema%20File%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="336" y="139" w="527" h="-1" measuredW="365" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>focused</state>
+        <text>Server%3D%28local%29%3BDatabase%3DMigrator%3BTrusted_Connection%3DTrue%3B</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="336" y="172" w="527" h="-1" measuredW="252" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>C%3A%5CProjects%5CMigrator%5CDatabase%5CMigrations</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="336" y="202" w="239" h="-1" measuredW="110" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>SchemaMigration</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextInput" x="336" y="232" w="521" h="-1" measuredW="262" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>focused</state>
+        <text>C%3A%5CProjects%5CMigrator%5CDatabase%5CSchema.sql</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="863" y="175" w="-1" h="-1" measuredW="34" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>...</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="863" y="232" w="-1" h="-1" measuredW="34" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>...</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::CheckBox" x="582" y="204" w="143" h="22" measuredW="138" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Use%20Migration%20Table</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::FieldSet" x="227" y="271" w="670" h="200" measuredW="200" measuredH="170" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Results</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TextArea" x="239" y="286" w="646" h="170" measuredW="200" measuredH="140" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="226" y="483" w="-1" h="-1" measuredW="173" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <menuIcon>false</menuIcon>
+        <state>up</state>
+        <text>Create%20New%20Migration%20File</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="409" y="483" w="-1" h="-1" measuredW="67" measuredH="27" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Migrate</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="486" y="483" w="-1" h="-1" measuredW="130" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Generate%20Schema</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Button" x="624" y="483" w="-1" h="-1" measuredW="101" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Clear%20Results</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="841" y="483" w="-1" h="-1" measuredW="56" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Close</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
