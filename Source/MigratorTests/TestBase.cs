@@ -13,6 +13,10 @@ namespace MigratorTests
 {
     class TestBase
     {
+        #region Contants
+        protected const string _MIGRATOR_DB_NAME = "MigratorTests";
+        #endregion
+
         #region Vars
         protected string _connString;
         protected Database _migratorDb;
@@ -29,7 +33,7 @@ namespace MigratorTests
             _masterConnString = ConfigurationManager.ConnectionStrings["Master"].ConnectionString;
 
             // Connection string for the migrator database.
-            _connString = ConfigurationManager.ConnectionStrings["Migrator"].ConnectionString;
+            _connString = _masterConnString.Replace("Database=Master", "Database=" + _MIGRATOR_DB_NAME);
 
             // Establish a connection to the database.
             ResetDatabase();
