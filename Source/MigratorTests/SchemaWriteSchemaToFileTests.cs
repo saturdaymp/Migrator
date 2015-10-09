@@ -82,6 +82,22 @@ namespace MigratorTests
                 expectedSchemaText = expectedSchemaText.Substring(0, expectedSchemaText.IndexOf("-- Migrations"));
             }
 
+            // For some reason SQL Server 2014 always puts one extra newline after it writes a
+            // stored proce.  For example if the orginail file is:
+            //
+            // BEGIN
+            // <stroed proc>
+            // END
+            // GO
+            // 
+            // SQL 2014 will put a newline between the END and the GO.  Then if you put
+            // a new line in the originail file then SQL Server 2014 will add another one.
+            //
+            //To fix this problem remove the blank lines from both files before
+            // comparing them.
+            expectedSchemaText = Regex.Replace(expectedSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
+            resultSchemaText = Regex.Replace(resultSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
+
             // Is it what we expect?  
             Assert.AreEqual(expectedSchemaText, resultSchemaText);
         }
