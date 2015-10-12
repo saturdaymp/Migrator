@@ -14,6 +14,10 @@ You can find the latest version by clicking [here](https://bitbucket.org/saturda
 
 Migrator runs on most versions of Windows and is designed to run against SQL Server 2005 to 2014.
 
-### More Info ###
+### Documentation ###
 
-More information about Migrator along with a quickstart guide can be found on the [wiki](https://bitbucket.org/saturdaymp/migrator/wiki/Home).
+Migrator documentation along with a quickstart guide can be found on the [wiki](https://bitbucket.org/saturdaymp/migrator/wiki/Home).  If you see anything in the documentation that is incorrect or missing please let us know.  Even better update the documentation your self since the wiki is public.  Your help would be much appreciated.
+
+### Bugs and Feature Requests ###
+
+Please help us make Migrator better but reporting any bugs your find or suggesting improvements.  The best way to do this is to open a new issue by clicking [here](https://bitbucket.org/saturdaymp/migrator/issues).
