@@ -4,20 +4,38 @@ Migrator is Awesome!  It’s a database migration tool inspired by the [Ruby on 
 
 Boom! Done! 
 
-### Installing ###
+## Installing ##
 
 Download the zip files and extract the files into a folder of your choosing.  You can run the GUI using the MigratorGUI.exe and the command line using the MigratorConsole.exe.
 
-You can find the latest version by clicking [here](https://bitbucket.org/saturdaymp/migrator/downloads).
+You can downlaod the latest version, and past versions, [here](https://bitbucket.org/saturdaymp/migrator/downloads).
 
-### Supported Platforms ###
+## Supported Platforms ##
 
 Migrator runs on most versions of Windows and is designed to run against SQL Server 2005 to 2014.
 
-### Documentation ###
+## Documentation ##
 
-Migrator documentation and a quickstart guide can be found on the [wiki](https://bitbucket.org/saturdaymp/migrator/wiki/Home).  If you see anything in the documentation that is incorrect or missing, please let us know.  Even better, update the documentation yourself since the wiki is public.  Your help would be much appreciated.
+Migrator documentation and a quickstart guide can be found on the [wiki](https://bitbucket.org/saturdaymp/migrator/wiki/Home).
 
-### Bugs and Feature Requests ###
+## Contribute ##
 
-Please help us make Migrator better by reporting any bugs you find or suggesting improvements.  The best way to do this is to open a new issue by clicking [here](https://bitbucket.org/saturdaymp/migrator/issues).
+There are several ways you help can make Migrator better:
+
+- **Documentation:** The [wiki](https://bitbucket.org/saturdaymp/migrator/wiki) is publicly editable.
+
+- **Bugs and Feature Requests:** Open a new issue by clicking [here](https://bitbucket.org/saturdaymp/migrator/issues).
+
+- **Resolve an Issue:** Fix or implement an existing [issue](https://bitbucket.org/saturdaymp/migrator/issues?status=new&status=open) then send us a [pull request](https://confluence.atlassian.com/bitbucket/work-with-pull-requests-223220593.html).
+
+- **Monetary:** Support us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2). Please note a PayPal account is **not** required and you can set your contribution amount.
+
+Financial contributions are used to pay for Migrator expenses (such as MSDN subscriptions) and compensate the maintainers.
+
+Your contributions are much appreciated.
+
+## Maintainers ##
+
+Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC](https://bitbucket.org/AdaChan-Cumming/), the founders of [Saturday Morning Productions](http://saturdaymp.com/).  If you have any questions about Migrator that aren't answered above or in the wiki give us a shout at <support@saturdaymp.com>.
+
+# [![Pay Now](https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2) #
