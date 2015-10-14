@@ -28,7 +28,7 @@ There are several ways you help can make Migrator better:
 
 - **Resolve an Issue:** Fix or implement an existing [issue](https://bitbucket.org/saturdaymp/migrator/issues?status=new&status=open) then send us a [pull request](https://confluence.atlassian.com/bitbucket/work-with-pull-requests-223220593.html).
 
-- **Monetary:** Support us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2). Please note a PayPal account is **not** required and you can set your contribution amount.
+- **Monetary:** Support us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2). Please note, a PayPal account is **not** required and you can set your contribution amount.
 
 Financial contributions are used to pay for Migrator expenses (such as MSDN subscriptions) and compensate the maintainers.
 
