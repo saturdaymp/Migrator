@@ -36,6 +36,6 @@ Your contributions are much appreciated.
 
 ## Maintainers ##
 
-Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC](https://bitbucket.org/AdaChan-Cumming/), the founders of [Saturday Morning Productions](http://saturdaymp.com/).  If you have any questions about Migrator that aren't answered above or in the wiki give us a shout at <support@saturdaymp.com>.
+Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC](https://bitbucket.org/AdaChan-Cumming/), the founders of [Saturday Morning Productions](http://saturdaymp.com/).  If you have any questions about Migrator that aren't answered above or in the wiki, give us a shout at <support@saturdaymp.com>.
 
 # [![Pay Now](https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2) #
