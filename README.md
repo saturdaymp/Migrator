@@ -8,7 +8,7 @@ Boom! Done!
 
 Download the zip files and extract the files into a folder of your choosing.  You can run the GUI using the MigratorGUI.exe and the command line using the MigratorConsole.exe.
 
-You can downlaod the latest version, and past versions, [here](https://bitbucket.org/saturdaymp/migrator/downloads).
+You can download the latest version, and past versions, [here](https://bitbucket.org/saturdaymp/migrator/downloads).
 
 ## Supported Platforms ##
 
