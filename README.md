@@ -43,4 +43,4 @@ Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC]
 
 ## License ##
 
-Migrator is licensed under the [MIT License](https://bitbucket.org/saturdaymp/migrator/src/128e11be5aa7cfe1a3786e1d91057bc9e4a43ea1/License.txt?at=default&fileviewer=file-view-default).
+Migrator is licensed under the [MIT License](License.txt).
