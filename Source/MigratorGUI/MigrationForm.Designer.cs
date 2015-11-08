@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MigrationForm));
             this.ConnStringLabel = new System.Windows.Forms.Label();
             this.MigrationFolderLabel = new System.Windows.Forms.Label();
             this.ConnStringTextBox = new System.Windows.Forms.TextBox();
@@ -69,9 +70,9 @@
             // 
             // ConnStringTextBox
             // 
-            this.ConnStringTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConnStringTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ConnStringTextBox.Location = new System.Drawing.Point(124, 24);
             this.ConnStringTextBox.Name = "ConnStringTextBox";
             this.ConnStringTextBox.Size = new System.Drawing.Size(644, 20);
@@ -79,9 +80,9 @@
             // 
             // MigrationFolderTextBox
             // 
-            this.MigrationFolderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.MigrationFolderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MigrationFolderTextBox.Location = new System.Drawing.Point(124, 50);
             this.MigrationFolderTextBox.Name = "MigrationFolderTextBox";
             this.MigrationFolderTextBox.Size = new System.Drawing.Size(644, 20);
@@ -100,9 +101,9 @@
             // 
             // ResultsGroupBox
             // 
-            this.ResultsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResultsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultsGroupBox.Controls.Add(this.ResultsTextBox);
             this.ResultsGroupBox.Location = new System.Drawing.Point(27, 151);
             this.ResultsGroupBox.Name = "ResultsGroupBox";
@@ -113,9 +114,9 @@
             // 
             // ResultsTextBox
             // 
-            this.ResultsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResultsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultsTextBox.Location = new System.Drawing.Point(6, 19);
             this.ResultsTextBox.Multiline = true;
             this.ResultsTextBox.Name = "ResultsTextBox";
@@ -161,9 +162,9 @@
             // 
             // MigrationTableTextBox
             // 
-            this.MigrationTableTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.MigrationTableTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MigrationTableTextBox.Location = new System.Drawing.Point(124, 76);
             this.MigrationTableTextBox.Name = "MigrationTableTextBox";
             this.MigrationTableTextBox.Size = new System.Drawing.Size(246, 20);
@@ -191,9 +192,9 @@
             // 
             // SchemaFileTextBox
             // 
-            this.SchemaFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.SchemaFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SchemaFileTextBox.Location = new System.Drawing.Point(123, 102);
             this.SchemaFileTextBox.Name = "SchemaFileTextBox";
             this.SchemaFileTextBox.Size = new System.Drawing.Size(644, 20);
@@ -263,8 +264,9 @@
             this.Controls.Add(this.ConnStringTextBox);
             this.Controls.Add(this.MigrationFolderLabel);
             this.Controls.Add(this.ConnStringLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MigrationForm";
-            this.Text = "Migration";
+            this.Text = "Migrator";
             this.Load += new System.EventHandler(this.MigrationForm_Load);
             this.ResultsGroupBox.ResumeLayout(false);
             this.ResultsGroupBox.PerformLayout();
