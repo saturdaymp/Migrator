@@ -4,6 +4,8 @@ Migrator is Awesome!  It’s a database migration tool inspired by the [Ruby on 
 
 Boom! Done! 
 
+![Goose](Logo/GooseSmall.png)
+
 ## Installing ##
 
 Download the zip files and extract the files into a folder of your choosing.  You can run the GUI using the MigratorGUI.exe and the command line using the MigratorConsole.exe.
