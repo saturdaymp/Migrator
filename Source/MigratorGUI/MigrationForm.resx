@@ -112,9 +112,49 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
