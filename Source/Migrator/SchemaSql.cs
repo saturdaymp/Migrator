@@ -1,12 +1,8 @@
-﻿using Microsoft.SqlServer.Management.Common;
-using Microsoft.SqlServer.Management.Smo;
-using Microsoft.SqlServer.Management.Sdk.Sfc;
+﻿using Microsoft.SqlServer.Management.Smo;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 
@@ -58,6 +54,16 @@ namespace Migrator
             scripter.Options.IncludeHeaders = false;
             scripter.Options.AppendToFile = true;
             scripter.Options.FileName = schemaFile;
+
+
+            // User defined tables.
+            StatusUpdate("Scripting UDTs...");
+            var udts = new List<NamedSmoObject>();
+            foreach (UserDefinedTableType u in db.UserDefinedTableTypes)
+            {
+                AddSmoObjectToList(udts, u);
+            }
+            scripter.Script(udts.ToArray());
 
 
             // Script the tables.  As far as I can tell the tables
