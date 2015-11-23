@@ -1,10 +1,7 @@
-﻿using Migrator;
+﻿using System;
+using Migrator;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MigratorTests
@@ -79,7 +76,7 @@ namespace MigratorTests
             // from the expected text.
             if (migrationTable == "")
             {
-                expectedSchemaText = expectedSchemaText.Substring(0, expectedSchemaText.IndexOf("-- Migrations"));
+                expectedSchemaText = expectedSchemaText.Substring(0, expectedSchemaText.IndexOf("-- Migrations", StringComparison.CurrentCultureIgnoreCase));
             }
 
             // For some reason SQL Server 2014 always puts one extra newline after it writes a
@@ -93,7 +90,7 @@ namespace MigratorTests
             // SQL 2014 will put a newline between the END and the GO.  Then if you put
             // a new line in the originail file then SQL Server 2014 will add another one.
             //
-            //To fix this problem remove the blank lines from both files before
+            // To fix this problem remove the blank lines from both files before
             // comparing them.
             expectedSchemaText = Regex.Replace(expectedSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
             resultSchemaText = Regex.Replace(resultSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
