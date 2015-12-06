@@ -95,7 +95,7 @@ namespace MigratorTests
             expectedSchemaText = Regex.Replace(expectedSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
             resultSchemaText = Regex.Replace(resultSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
 
-            // Is it what we expect?  
+            // Is it what we expect?
             Assert.AreEqual(expectedSchemaText, resultSchemaText);
         }
 
