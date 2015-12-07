@@ -6,11 +6,13 @@ Boom! Done!
 
 ![Goose](Logo/GooseSmall.png)
 
-## Installing ##
+## Download and Installing##
+
+You can download the latest version, and past versions, on the [Downloads Page](https://bitbucket.org/saturdaymp/migrator/downloads).
 
 Download the zip files and extract the files into a folder of your choosing.  You can run the GUI using the MigratorGUI.exe and the command line using the MigratorConsole.exe.
 
-You can download the latest version, and past versions, [here](https://bitbucket.org/saturdaymp/migrator/downloads).
+Find out what new features have been added and issues fixed in the [Release Notes](https://bitbucket.org/saturdaymp/migrator/wiki/Migrator%20Release%20Notes)
 
 ## Supported Platforms ##
 
