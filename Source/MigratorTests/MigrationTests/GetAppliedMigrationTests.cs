@@ -1,9 +1,5 @@
 ﻿using Migrator;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MigratorTests.MigrationTests
 {
@@ -39,20 +35,20 @@ namespace MigratorTests.MigrationTests
         [Test]
         public void ThreeMigrations()
         {
-            const string MIGRATION_ONE = "000001";
-            const string MIGRATION_TWO = "000002";
-            const string MIGRATION_THREE = "000003";
+            const string migrationOne = "000001";
+            const string migrationTwo = "000002";
+            const string migrationThree = "000003";
 
-            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + MIGRATION_ONE + "')");
-            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + MIGRATION_TWO + "')");
-            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + MIGRATION_THREE + "')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + migrationOne + "')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + migrationTwo + "')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + _migration.MigraionTable + " Values ('" + migrationThree + "')");
 
             var migrations = _migration.GetAppliedMigrations();
             Assert.AreEqual(3, migrations.Count);
 
-            Assert.IsTrue(migrations.Contains(MIGRATION_ONE));
-            Assert.IsTrue(migrations.Contains(MIGRATION_TWO));
-            Assert.IsTrue(migrations.Contains(MIGRATION_THREE));
+            Assert.IsTrue(migrations.Contains(migrationOne));
+            Assert.IsTrue(migrations.Contains(migrationTwo));
+            Assert.IsTrue(migrations.Contains(migrationThree));
         }
         #endregion
 

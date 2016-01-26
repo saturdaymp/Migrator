@@ -2,7 +2,6 @@
 using Migrator;
 using NUnit.Framework;
 using System;
-using System.Configuration;
 using System.Data;
 using System.IO;
 
@@ -65,20 +64,20 @@ namespace MigratorTests.MigrationTests
         [Test]
         public void ExistingDb()
         {
-            const string MIGRATION_FOLDER = "..\\..\\MigrationTests\\ExistingDbMigrations";
+            const string migrationFolder = "..\\..\\MigrationTests\\ExistingDbMigrations";
 
             // Setup the DB so that some of the migrations have been ran.
-            string createContactsTableSql = File.ReadAllText(MIGRATION_FOLDER + "\\20100213145632_CreateContactsTable.sql");
+            string createContactsTableSql = File.ReadAllText(migrationFolder + "\\20100213145632_CreateContactsTable.sql");
             _migratorDb.ExecuteNonQuery(createContactsTableSql);
-            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DEFAULT_SCHEMA_MIGRATIONS_TABLE + " Values ('20100213145632')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DefaultSchemaMigrationsTable + " Values ('20100213145632')");
 
-            string createAddressesTableSql = File.ReadAllText(MIGRATION_FOLDER + "\\20100328124805_AddAddressesToContactsTable.sql");
+            string createAddressesTableSql = File.ReadAllText(migrationFolder + "\\20100328124805_AddAddressesToContactsTable.sql");
             _migratorDb.ExecuteNonQuery(createAddressesTableSql);
-            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DEFAULT_SCHEMA_MIGRATIONS_TABLE + " Values ('20100328124805')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DefaultSchemaMigrationsTable + " Values ('20100328124805')");
 
-            string createContactsViewSql = File.ReadAllText(MIGRATION_FOLDER + "\\20100215092393_CreateContactsView.sql");
+            string createContactsViewSql = File.ReadAllText(migrationFolder + "\\20100215092393_CreateContactsView.sql");
             _migratorDb.ExecuteNonQuery(createContactsViewSql);
-            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DEFAULT_SCHEMA_MIGRATIONS_TABLE + " Values ('20100215092393')");
+            _migratorDb.ExecuteNonQuery("Insert Into " + Migration.DefaultSchemaMigrationsTable + " Values ('20100215092393')");
 
 
             // Run the migrations.
@@ -121,10 +120,10 @@ namespace MigratorTests.MigrationTests
         [Test]
         public void CreateMigrationFile()
         {
-            string MIGRATION_FOLDER = Path.GetTempPath();
-            Console.WriteLine(MIGRATION_FOLDER);
+            string migrationFolder = Path.GetTempPath();
+            Console.WriteLine(migrationFolder);
 
-            string newFile = Migration.CreateMigrationFile(MIGRATION_FOLDER, "NUnitTest");
+            string newFile = Migration.CreateMigrationFile(migrationFolder, "NUnitTest");
 
             Assert.IsTrue(File.Exists(newFile));
         }
