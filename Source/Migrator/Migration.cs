@@ -109,7 +109,7 @@ namespace Migrator
         /// <returns>The version part of the file name.</returns>
         private static string GetVersionFromFileName(string migrationFileName)
         {
-            return Path.GetFileName(migrationFileName.Substring(0, migrationFileName.IndexOf("_", StringComparison.Ordinal)));
+            return Path.GetFileName(migrationFileName.Substring(0, migrationFileName.LastIndexOf("_", StringComparison.Ordinal)));
         }
 
         /// <summary>
