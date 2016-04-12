@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migration.cs" />
+    <Compile Include="MissingMigrationFileVersionException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schema.cs" />
     <Compile Include="SchemaSql.cs" />
