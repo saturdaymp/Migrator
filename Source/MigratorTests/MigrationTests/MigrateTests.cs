@@ -111,6 +111,17 @@ namespace MigratorTests.MigrationTests
         {
             _migration.Migrate("Blahdalsjhdflkjs");
         }
+
+        /// <summary>
+        /// Check that the correct excpetion is thrown if the version of the migration
+        /// file can't be determined.
+        /// </summary>
+        [Test]
+        public void MissingVersion()
+        {
+            var ex = Assert.Throws<MissingMigrationFileVersionException>(() => _migration.Migrate("..\\..\\MigrationTests\\MissingVersion"));
+        }
+
         #endregion
 
         #region Create Migration Tests

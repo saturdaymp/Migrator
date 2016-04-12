@@ -46,6 +46,8 @@ namespace Migrator
         /// <param name="statusCallback">Used to update the status of the migration (i.e. what file is being
         /// migrated, has it been migrated already, etc).</param>
         /// <exception cref="DirectoryNotFoundException">If the migration folder isn't valid.</exception>
+        /// <exception cref="MissingMigrationFileVersionException">Thrown if the the version can't be parsed
+        /// from a migration file.</exception>
         public void Migrate(string migrationFolder, UpdateStatus statusCallback = null)
         {
             // So we can do let the caller know how things are going.
@@ -71,6 +73,11 @@ namespace Migrator
                 // The file migration version.
                 var version = GetVersionFromFileName(migrationFile);
                 StatusUpdate($"... version: {version}");
+
+                if (string.IsNullOrEmpty(version))
+                {
+                    throw new MissingMigrationFileVersionException(migrationFile);
+                }
 
                 // Has the migration been run already?
                 if (!previousMigrations.Contains(version))
@@ -109,7 +116,19 @@ namespace Migrator
         /// <returns>The version part of the file name.</returns>
         private static string GetVersionFromFileName(string migrationFileName)
         {
-            return Path.GetFileName(migrationFileName.Substring(0, migrationFileName.LastIndexOf("_", StringComparison.Ordinal)));
+            var fileName = Path.GetFileName(migrationFileName);
+            if (fileName == null)
+            {
+                return "";
+            }
+
+            var indexOfUnderscore = fileName.IndexOf("_", StringComparison.Ordinal);
+            if (indexOfUnderscore <= 0)
+            {
+                return "";
+            }
+
+            return fileName.Substring(0, indexOfUnderscore);
         }
 
         /// <summary>
