@@ -13,7 +13,7 @@ namespace MigratorTests.MigrationTests
         #region Vars
         private Migration _migration;
 
-        private string _baseDirecotry = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MigrationTests");
+        private readonly string _baseDirecotry = Path.Combine(TestContext.CurrentContext.TestDirectory, "MigrationTests");
         #endregion
 
         #region SetUp/TearDown
