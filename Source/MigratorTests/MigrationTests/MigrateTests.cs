@@ -12,6 +12,8 @@ namespace MigratorTests.MigrationTests
     {
         #region Vars
         private Migration _migration;
+
+        private string _baseDirecotry = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MigrationTests");
         #endregion
 
         #region SetUp/TearDown
@@ -39,7 +41,7 @@ namespace MigratorTests.MigrationTests
         {
 
             // Run the migrations.
-            _migration.Migrate("..\\..\\MigrationTests\\NewDbMigrations");
+            _migration.Migrate(Path.Combine(_baseDirecotry, "NewDbMigrations"));
 
             // Two tables, the schema table and the person table.            
             Assert.AreEqual(2, _migratorDb.Tables.Count);
@@ -64,7 +66,7 @@ namespace MigratorTests.MigrationTests
         [Test]
         public void ExistingDb()
         {
-            const string migrationFolder = "..\\..\\MigrationTests\\ExistingDbMigrations";
+            string migrationFolder = Path.Combine(_baseDirecotry, "ExistingDbMigrations");
 
             // Setup the DB so that some of the migrations have been ran.
             string createContactsTableSql = File.ReadAllText(migrationFolder + "\\20100213145632_CreateContactsTable.sql");
@@ -81,7 +83,7 @@ namespace MigratorTests.MigrationTests
 
 
             // Run the migrations.
-            _migration.Migrate("..\\..\\MigrationTests\\ExistingDbMigrations");
+            _migration.Migrate(Path.Combine(_baseDirecotry, "ExistingDbMigrations"));
 
             // Were the two updates applied?
             Table contactsTable = _migratorDb.Tables["Contacts"];
@@ -106,10 +108,10 @@ namespace MigratorTests.MigrationTests
         /// <summary>
         /// What happens if an invalid migration folder is passed in?
         /// </summary>
-        [Test, ExpectedException(typeof(DirectoryNotFoundException))]
+        [Test]
         public void InvalidFolder()
         {
-            _migration.Migrate("Blahdalsjhdflkjs");
+            Assert.Throws<DirectoryNotFoundException>(() => _migration.Migrate(Path.Combine(_baseDirecotry, "Blahdalsjhdflkjs")));
         }
 
         /// <summary>
@@ -119,7 +121,7 @@ namespace MigratorTests.MigrationTests
         [Test]
         public void MissingVersion()
         {
-            var ex = Assert.Throws<MissingMigrationFileVersionException>(() => _migration.Migrate("..\\..\\MigrationTests\\MissingVersion"));
+            Assert.Throws<MissingMigrationFileVersionException>(() => _migration.Migrate(Path.Combine(_baseDirecotry, "MissingVersion")));
         }
 
         #endregion

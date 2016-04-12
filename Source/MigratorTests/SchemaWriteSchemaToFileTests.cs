@@ -9,14 +9,16 @@ namespace MigratorTests
     [TestFixture]
     class SchemaWriteSchemaToFileTests : TestBase
     {
-        [TestFixtureSetUp]
-        public override void TestFixtureSetUp()
+        private readonly string _baseDirecotry = AppDomain.CurrentDomain.BaseDirectory;
+
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
-            base.TestFixtureSetUp();
+            base.OneTimeSetUp();
 
             // Create a database with some tables, views, funcitons, and procs.
             // The test data should have a couple views that depend on each other.
-            _migratorDb.ExecuteNonQuery(File.ReadAllText("..\\..\\Schema.sql"));
+            _migratorDb.ExecuteNonQuery(File.ReadAllText(Path.Combine(_baseDirecotry, "Schema.sql")));
         }
 
         [Test]
@@ -70,7 +72,7 @@ namespace MigratorTests
             // a cheat as we assume that the generated schema file matches the 
             // file that was used to initially create the database with a couple
             // date sensative items removed.
-            var expectedSchemaText = File.ReadAllText("..\\..\\Schema.sql");
+            var expectedSchemaText = File.ReadAllText(Path.Combine(_baseDirecotry,"Schema.sql"));
 
             // If the migration table is empty then the inserts should NOT be scripted so remove that
             // from the expected text.

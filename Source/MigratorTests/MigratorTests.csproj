@@ -96,15 +96,31 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="MigrationTests\ExistingDbMigrations\20100213145632_CreateContactsTable.sql" />
-    <None Include="MigrationTests\ExistingDbMigrations\20100215091324_AddLastNameToPerson.sql" />
-    <None Include="MigrationTests\ExistingDbMigrations\20100328124805_AddAddressesToContactsTable.sql" />
-    <None Include="MigrationTests\NewDbMigrations\20100213145632_CreateContactsTable.sql" />
-    <None Include="MigrationTests\NewDbMigrations\20100215091324_AddLastNameToContacts.sql" />
-    <None Include="MigrationTests\ExistingDbMigrations\20100328123112_CreateAddressesTable.sql" />
-    <None Include="MigrationTests\ExistingDbMigrations\20100215092393_CreateContactsView.sql" />
+    <None Include="MigrationTests\ExistingDbMigrations\20100213145632_CreateContactsTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\ExistingDbMigrations\20100215091324_AddLastNameToPerson.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\ExistingDbMigrations\20100328124805_AddAddressesToContactsTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\NewDbMigrations\20100213145632_CreateContactsTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\NewDbMigrations\20100215091324_AddLastNameToContacts.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\ExistingDbMigrations\20100328123112_CreateAddressesTable.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MigrationTests\ExistingDbMigrations\20100215092393_CreateContactsView.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
-    <None Include="Schema.sql" />
+    <None Include="Schema.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Migrator\Migrator.csproj">
@@ -124,7 +140,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="MigrationTests\MissingVersion\MissingVersion.sql" />
+    <None Include="MigrationTests\MissingVersion\MissingVersion.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

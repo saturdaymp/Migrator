@@ -25,8 +25,8 @@ namespace MigratorTests
         #endregion
 
         #region Fixture SetUp/TearDown
-        [TestFixtureSetUp]
-        public virtual void TestFixtureSetUp()
+        [OneTimeSetUp]
+        public virtual void OneTimeSetUp()
         {
             // Connection string for master database, used when dropping and recreating the
             // Migrator database.
