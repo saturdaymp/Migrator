@@ -9,7 +9,7 @@ namespace MigratorTests
     [TestFixture]
     class SchemaWriteSchemaToFileTests : TestBase
     {
-        private readonly string _baseDirecotry = AppDomain.CurrentDomain.BaseDirectory;
+        private readonly string _baseDirecotry = TestContext.CurrentContext.TestDirectory;
 
         [OneTimeSetUp]
         public override void OneTimeSetUp()
