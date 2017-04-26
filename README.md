@@ -42,7 +42,20 @@ Your contributions are much appreciated.
 
 Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC](https://bitbucket.org/AdaChan-Cumming/), the founders of [Saturday Morning Productions](http://saturdaymp.com/).  If you have any questions about Migrator that aren't answered above or in the wiki, give us a shout at <support@saturdaymp.com>.
 
-# [![Pay Now](https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BZMRHHT7A43C2) #
+<div>
+<form action="/your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_nyJQQMAy2LviHqo1wDtnIvET"
+    data-amount="999"
+    data-name="Saturday Morning Productions Inc."
+    data-description="Widget"
+    data-image="https://s3.amazonaws.com/stripe-uploads/acct_16vrxaKFJHykjpVimerchant-icon-1493220279865-logo_square_250w%20-%20Copy.png"
+    data-locale="auto"
+    data-currency="cad">
+  </script>
+</form>
+</div>
 
 
 ## License ##
