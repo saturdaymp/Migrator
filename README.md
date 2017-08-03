@@ -6,38 +6,34 @@ Boom! Done!
 
 ![Goose](Logo/GooseSmall.png)
 
-## Download and Installing##
+## Download and Installing
 
-You can download the latest version, and past versions, on the [Downloads Page](https://bitbucket.org/saturdaymp/migrator/downloads).
+You can download the latest version [here](https://bitbucket.org/saturdaymp/migrator/downloads/) (link takes you to Bitbucket for now.  Will update to GitHub soon).
 
 Download the zip files and extract the files into a folder of your choosing.  You can run the GUI using the MigratorGUI.exe and the command line using the MigratorConsole.exe.
 
-Find out what new features have been added and issues fixed in the [Release Notes](https://bitbucket.org/saturdaymp/migrator/wiki/Migrator%20Release%20Notes)
+Find out what new features have been added and issues fixed in the [Release Notes](https://github.com/saturdaymp/Migrator/wiki/Release-Notes)
 
-## Supported Platforms ##
+## Supported Platforms
 
-Migrator runs on most versions of Windows and is designed to run against SQL Server 2005 to 2014.
+Migrator runs on most versions of Windows and is designed to run against SQL Server 2005 to 2016.
 
-## Documentation ##
+## Documentation
 
-Migrator documentation and a quickstart guide can be found on the [wiki](https://bitbucket.org/saturdaymp/migrator/wiki/Home).
+Migrator documentation and a quickstart guide can be found on the [wiki](https://github.com/saturdaymp/Migrator/wiki).
 
-## Contribute ##
+## Contribute
 
 There are several ways you help can make Migrator better:
 
-- **Documentation:** The [wiki](https://bitbucket.org/saturdaymp/migrator/wiki) is publicly editable.
+- **Documentation:** The [wiki](https://github.com/saturdaymp/Migrator/wiki) is publicly editable.
 
-- **Bugs and Feature Requests:** Open a new issue by clicking [here](https://bitbucket.org/saturdaymp/migrator/issues).
+- **Bugs and Feature Requests:** Open a new issue by clicking [here](https://github.com/saturdaymp/Migrator/issues).
 
-- **Resolve an Issue:** Fix or implement an existing [issue](https://bitbucket.org/saturdaymp/migrator/issues?status=new&status=open) then send us a [pull request](https://confluence.atlassian.com/bitbucket/work-with-pull-requests-223220593.html).
+- **Resolve an Issue:** Fix or implement an existing [issue](https://github.com/saturdaymp/Migrator/issues) then send us a pull request.
 
 Your contributions are much appreciated.
 
-## Maintainers ##
-
-Migrator is maintained by [Chris C](https://bitbucket.org/chris_c/) and [Ada CC](https://bitbucket.org/AdaChan-Cumming/), the founders of [Saturday Morning Productions](http://saturdaymp.com/).  If you have any questions about Migrator that aren't answered above or in the wiki, give us a shout at <support@saturdaymp.com>.
-
-## License ##
+## License
 
 Migrator is licensed under the [MIT License](License.txt).
