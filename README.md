@@ -33,7 +33,3 @@ There are several ways you help can make Migrator better:
 - **Resolve an Issue:** Fix or implement an existing [issue](https://github.com/saturdaymp/Migrator/issues) then send us a pull request.
 
 Your contributions are much appreciated.
-
-## License
-
-Migrator is licensed under the [MIT License](License.txt).
