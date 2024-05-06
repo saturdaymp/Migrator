@@ -94,13 +94,11 @@ namespace MigratorTests
             //
             // To fix this problem remove the blank lines from both files before
             // comparing them.
-            expectedSchemaText = Regex.Replace(expectedSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
-            resultSchemaText = Regex.Replace(resultSchemaText, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
-
+            expectedSchemaText = Regex.Replace(expectedSchemaText, @"^\r?\n", "", RegexOptions.Multiline);
+            resultSchemaText = Regex.Replace(resultSchemaText, @"^\r?\n", "", RegexOptions.Multiline);
+            
             // Is it what we expect?
             Assert.AreEqual(expectedSchemaText, resultSchemaText);
         }
-
-
     }
 }

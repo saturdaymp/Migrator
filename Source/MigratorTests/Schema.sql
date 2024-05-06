@@ -28,6 +28,7 @@ BEGIN
 END
 ' 
 END
+
 GO
 SET ANSI_NULLS ON
 GO
@@ -46,6 +47,17 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[AddressView]'))
+EXEC dbo.sp_executesql @statement = N'CREATE VIEW [dbo].[AddressView]
+AS
+SELECT     dbo.Addresses.*
+FROM         dbo.Addresses
+' 
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Contacts]') AND type in (N'U'))
 BEGIN
 CREATE TABLE [dbo].[Contacts](
@@ -55,28 +67,6 @@ CREATE TABLE [dbo].[Contacts](
 	[AddressId] [int] NULL
 ) ON [PRIMARY]
 END
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SchemaMigrations]') AND type in (N'U'))
-BEGIN
-CREATE TABLE [dbo].[SchemaMigrations](
-	[Version] [varchar](50) COLLATE Latin1_General_CI_AS NOT NULL
-) ON [PRIMARY]
-END
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[dbo].[AddressView]'))
-EXEC dbo.sp_executesql @statement = N'CREATE VIEW [dbo].[AddressView]
-AS
-SELECT     dbo.Addresses.*
-FROM         dbo.Addresses
-' 
 GO
 SET ANSI_NULLS ON
 GO
@@ -105,6 +95,17 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SchemaMigrations]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[SchemaMigrations](
+	[Version] [varchar](50) COLLATE Latin1_General_CI_AS NOT NULL
+) ON [PRIMARY]
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AddressInsert]') AND type in (N'P', N'PC'))
 BEGIN
 EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[AddressInsert] AS' 
@@ -118,14 +119,12 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
     -- Insert statements for procedure here
 	INSERT INTO Addresses(City, Street)
 	VALUES (@City, @Street);
-	
 	Return SCOPE_IDENTITY();
-	
 END
+
 GO
 SET ANSI_NULLS ON
 GO
@@ -146,13 +145,12 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
 	-- Call other stored procs.
 	DECLARE @AddressId INT;
 	EXEC @AddressId = AddressInsert @City, @Street;
 	EXEC ContactInsert @FirstName, @LastName, @AddressId;
-	
 END
+
 GO
 SET ANSI_NULLS ON
 GO
@@ -172,12 +170,11 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
     -- Insert statements for procedure here
 	INSERT INTO Contacts (FirstName, LastName, AddressId)
 	VALUES (@FirstName, @LastName, @AddressId)
-	
 END
+
 GO
 -- Migrations --
 Insert Into SchemaMigrations Values ('20101118122220');
