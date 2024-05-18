@@ -22,6 +22,36 @@ Migrator runs on most versions of Windows and is designed to run against SQL Ser
 
 Migrator documentation and a quickstart guide can be found on the [wiki](https://github.com/saturdaymp/Migrator/wiki).
 
+## Versioning
+
+Migrator uses [GitVersion](https://gitversion.net/) to automatically generate version numbers based on the state of the Git repository. The versioning scheme follows trunk-based development with release branches:
+
+- The `main` branch contains the latest development version and will produce versions like `1.2.3-ci.1`
+- Release branches (`release-*`) contain stable versions and will produce versions like `1.2.3-beta.1`
+- Tags are used to mark specific releases
+
+The GitVersion configuration can be found in [GitVersion.yml](GitVersion.yml).
+
+## Versioning
+
+Migrator uses [GitVersion](https://gitversion.net/) to automatically generate version numbers based on the state of the Git repository. The versioning scheme follows trunk-based development with release branches:
+
+- The `main` branch contains the latest development version and will produce versions like `1.2.3-ci.1`
+- Release branches (`release-*`) contain stable versions and will produce versions like `1.2.3-beta.1`
+- Tags are used to mark specific releases
+
+The GitVersion configuration can be found in [GitVersion.yml](GitVersion.yml).
+
+## Versioning
+
+Migrator uses [GitVersion](https://gitversion.net/) to automatically generate version numbers based on the state of the Git repository. The versioning scheme follows trunk-based development with release branches:
+
+- The `main` branch contains the latest development version and will produce versions like `1.2.3-ci.1`
+- Release branches (`release-*`) contain stable versions and will produce versions like `1.2.3-beta.1`
+- Tags are used to mark specific releases
+
+The GitVersion configuration can be found in [GitVersion.yml](GitVersion.yml).
+
 ## Contribute
 
 There are several ways you help can make Migrator better:
