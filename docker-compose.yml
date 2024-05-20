@@ -8,3 +8,8 @@ services:
       - MSSQL_SA_PASSWORD=password1234!
     ports:
       - 1433:1433
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:
