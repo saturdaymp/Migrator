@@ -3,7 +3,9 @@ using Microsoft.SqlServer.Management.Smo;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+//using System.Data.SqlClient;
+using Microsoft.Data;
+using Microsoft.Data.SqlClient;
 using System.IO;
 using System.Linq;
 

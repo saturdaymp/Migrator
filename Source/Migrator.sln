@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA28515E-50A4-47F8-BBEC-C36FB406C0DE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrator", "Migrator\Migrator.csproj", "{6B03D043-AAB2-44BB-A2D8-DE941BB77EE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigratorTests", "MigratorTests\MigratorTests.csproj", "{0C11B41A-A3C4-4D65-9C8E-B280D9F95869}"
@@ -16,6 +14,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigratorConsoleLib", "MigratorConsoleLib\MigratorConsoleLib.csproj", "{F0BB3891-76A7-4FE7-BB82-AF312338FF5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigratorConsoleLibTests", "MigratorConsoleLibTests\MigratorConsoleLibTests.csproj", "{1154C49E-67AB-4F41-AC8E-006FF435C28C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{40713606-8929-4148-B3CE-EAEF2574C8B7}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
